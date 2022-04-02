@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "ui-train",
+    "slug": "ui-train",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
