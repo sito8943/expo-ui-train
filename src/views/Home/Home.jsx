@@ -20,7 +20,7 @@ import img3 from "../../assets/images/img3.jpg";
 
 // styles
 import "./style.css";
-import { span, titleArea, titleCss, spanTitle, centerRow } from "./styles";
+import homeCss from "./styles";
 
 const tabs = ["Popular", "For You", "India", "China", "Japan"];
 
@@ -40,16 +40,16 @@ function Home() {
     <Mobile>
       <Navbar />
       <Container>
-        <Text>Hola</Text>
+        <View style={homeCss.titleArea}>
+          <Text style={homeCss.title}>
+            Visit your most favorite{" "}
+            <Text style={homeCss.spanTitle}>Museums Virtually</Text>
+          </Text>
+        </View>
       </Container>
       {/*
       <Container>
-        <div style={titleArea}>
-          <h2 style={titleCss}>
-            Visit your most favorite{" "}
-            <span style={spanTitle}>Museums Virtually</span>
-          </h2>
-        </div>
+        
 
         <Search />
         <TabView tabs={tabs} content={tabContent} />
