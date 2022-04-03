@@ -46,6 +46,7 @@ function Home() {
             <Text style={homeCss.spanTitle}>Museums Virtually</Text>
           </Text>
         </View>
+        <Search />
       </Container>
       {/*
       <Container>

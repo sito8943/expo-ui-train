@@ -2,39 +2,42 @@
 import { StyleSheet } from "react-native";
 
 const searchCss = StyleSheet.create({
-  backgroundColor: "none",
-  padding: "3px 0px 0 15px",
-  border: "none",
-  color: "#626262",
-  fontSize: 20,
-  cursor: "pointer",
+  container: {
+    backgroundColor: "rgb(233, 229, 229)",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "90%",
+    margin: "auto",
+    marginTop: 20,
+  },
+  searchButton: {
+    backgroundColor: "none",
+    paddingTop: 3,
+    paddingHorizontal: 10,
+    border: "none",
+    color: "rgb(98, 98, 98)",
+    fontSize: 20,
+    cursor: "pointer",
+  },
+  input: {
+    border: "none",
+    width: "100%",
+    padding: 15,
+    color: "rgb(98, 98, 98)",
+    backgroundColor: "none",
+    fontSize: "15px 15px 15px 5px",
+  },
+  filterButton: {
+    backgroundColor: "rgb(161, 157, 157)",
+    color: "aliceblue",
+    border: "none",
+    paddingVertical: 14,
+    paddingHorizontal: 15,
+    borderRadius: 5,
+    fontSize: "15px",
+    cursor: "pointer",
+  },
 });
 
-const inputCss = StyleSheet.create({
-  border: "none",
-  padding: 15,
-  color: "#626262",
-  backgroundColor: "none",
-  fontSize: "15px 15px 15px 5px",
-});
-
-const filterButtonCss = StyleSheet.create({
-  backgroundColor: "#a19d9d",
-  color: "aliceblue",
-  border: "none",
-  padding: "14px 15px",
-  borderRadius: 5,
-  fontSize: "15px",
-  cursor: "pointer",
-});
-
-const containerCss = StyleSheet.create({
-  backgroundColor: "#e9e5e5",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  width: "85%",
-  margin: "auto",
-});
-
-export { searchCss, inputCss, filterButtonCss, containerCss };
+export default searchCss;

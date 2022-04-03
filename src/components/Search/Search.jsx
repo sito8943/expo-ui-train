@@ -1,29 +1,32 @@
 import React, { useState } from "react";
 
+// react-native
+import { View, Text, TextInput, Pressable } from "react-native";
+
 // icons
 import { BsSearch, BsSliders } from "react-icons/bs";
 
 // styles
-import { containerCss, inputCss, searchCss, filterButtonCss } from "./styles";
+import searchCss from "./styles";
 
 const Search = () => {
   const [search, setSearch] = useState("");
 
   return (
-    <div style={containerCss}>
-      <button onClick={null} style={searchCss}>
+    <View style={searchCss.container}>
+      <Pressable onPress={null} style={searchCss.searchButton}>
         <BsSearch />
-      </button>
-      <input
-        style={inputCss}
-        value={search}
+      </Pressable>
+      <TextInput
+        style={searchCss.input}
+        value={searchCss.search}
         placeholder="Search countries, museums..."
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button style={filterButtonCss} onClick={null}>
+      <Pressable style={searchCss.filterButton} onPress={null}>
         <BsSliders />
-      </button>
-    </div>
+      </Pressable>
+    </View>
   );
 };
 

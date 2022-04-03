@@ -35,7 +35,7 @@ const navbarCss = StyleSheet.create({
     height: 37,
   },
   span: {
-    marginTop: 4,
+    marginTop: 6,
     marginLeft: 5,
   },
   container: {
