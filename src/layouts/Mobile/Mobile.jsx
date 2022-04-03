@@ -1,7 +1,7 @@
 import React from "react";
 
 // react-native
-import { ScrollView } from "react-native";
+import { View } from "react-native";
 
 // prop-types
 import PropTypes from "prop-types";
@@ -11,11 +11,7 @@ import mobileCss from "./styles";
 
 const Mobile = (props) => {
   const { children } = props;
-  return (
-    <ScrollView contentContainerStyle={mobileCss.container}>
-      {children}
-    </ScrollView>
-  );
+  return <View style={mobileCss.container}>{children}</View>;
 };
 
 Mobile.propTypes = {

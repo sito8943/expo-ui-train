@@ -2,8 +2,10 @@
 import { StyleSheet } from "react-native";
 
 const mobileContainer = StyleSheet.create({
-  width: "100%",
-  overflow: "scroll",
+  container: {
+    width: "100%",
+    overflow: "scroll",
+  },
 });
 
-export { mobileContainer };
+export default mobileContainer;

@@ -12,7 +12,7 @@ const dockCss = StyleSheet.create({
   },
   button: {
     border: "none",
-    color: "#9d9999",
+    color: "rgb(157, 153, 153)",
     padding: 10,
     fontSize: 18,
     backgroundColor: "rgb(243,243,243)",
@@ -21,7 +21,7 @@ const dockCss = StyleSheet.create({
   },
   activeButton: {
     border: "none",
-    color: "#9d9999",
+    color: "rgb(157, 153, 153)",
     padding: 10,
     fontSize: 18,
     cursor: "pointer",

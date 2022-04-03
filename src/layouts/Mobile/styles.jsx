@@ -4,10 +4,9 @@ import { StyleSheet } from "react-native";
 const mobileCss = StyleSheet.create({
   container: {
     width: "100vw",
-    height: "675vh",
+    height: "100vh",
     padding: "10px 0",
-    backgroundColor: "#f5f3f3",
-    display: "flex",
+    backgroundColor: "rgb(245, 243, 243)",
     flexDirection: "column",
     alignItems: "center",
   },

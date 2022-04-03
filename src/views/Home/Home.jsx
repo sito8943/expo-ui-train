@@ -38,7 +38,11 @@ const tabContent = [
 function Home() {
   return (
     <Mobile>
-      {/*<Navbar />
+      <Navbar />
+      <Container>
+        <Text>Hola</Text>
+      </Container>
+      {/*
       <Container>
         <div style={titleArea}>
           <h2 style={titleCss}>

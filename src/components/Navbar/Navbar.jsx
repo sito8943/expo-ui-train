@@ -1,33 +1,30 @@
 import React from "react";
 
+// react-native
+import { View, Pressable, Text } from "react-native-web";
+
 // icons
 import { BsList, BsBell, BsChevronDown } from "react-icons/bs";
 
 // styles
-import {
-  container,
-  drawerButton,
-  textListCss,
-  notificationCss,
-  spanCss,
-} from "./styles";
+import navbarCss from "./styles";
 
 const Navbar = () => {
   return (
-    <div style={container}>
-      <button onClick={null} style={drawerButton}>
+    <View style={navbarCss.container}>
+      <Pressable onClick={null} style={navbarCss.drawerButton}>
         <BsList />
-      </button>
-      <button onClick={null} style={textListCss}>
+      </Pressable>
+      <Pressable onClick={null} style={navbarCss.textList}>
         Europe
-        <span style={spanCss}>
+        <Text style={navbarCss.span}>
           <BsChevronDown />
-        </span>
-      </button>
-      <button onClick={null} style={notificationCss}>
+        </Text>
+      </Pressable>
+      <Pressable onClick={null} style={navbarCss.notification}>
         <BsBell />
-      </button>
-    </div>
+      </Pressable>
+    </View>
   );
 };
 
