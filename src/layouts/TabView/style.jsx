@@ -1,18 +1,19 @@
 // emotion
 import { StyleSheet } from "react-native";
 
-const tabsContainerCss = StyleSheet.create({
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: "15px 0 0px 0px",
-  overflow: "auto",
-  width: "85%",
-  margin: "auto",
+const tabViewCss = StyleSheet.create({
+  tabsContainerCss: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingTop: 15,
+    overflow: "auto",
+    width: "85%",
+    margin: "auto",
+  },
+  tabContainer: {
+    width: "100%",
+  },
 });
 
-const tabContainer = StyleSheet.create({
-  width: "100%",
-});
-
-export { tabContainer, tabsContainerCss };
+export default tabViewCss;

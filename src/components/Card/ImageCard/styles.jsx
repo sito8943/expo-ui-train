@@ -41,9 +41,10 @@ const imageCardCss = StyleSheet.create({
     fontWeight: 700,
   },
   vrHr: {
-    margin: "0 10px",
-    height: "90%",
-    borderColor: "rgba(240, 248, 255, 94)",
+    border: "1px solid rgba(240 248 255 / 31%)",
+    height: 35,
+    marginHorizontal: 10,
+    marginVertical: 0,
     cursor: "pointer",
   },
   starSpan: {

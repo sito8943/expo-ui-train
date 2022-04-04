@@ -46,10 +46,17 @@ const ImageCard = (props) => {
       margin: "auto",
       boxShadow: !noShadow ? "0px 15px 50px -20px" : "",
     },
+    imageBackground: {
+      borderRadius: 15,
+    },
   });
 
   return (
-    <ImageBackground source={src} style={backgroundImage.imageCarCssContainer}>
+    <ImageBackground
+      source={src}
+      imageStyle={backgroundImage.imageBackground}
+      style={backgroundImage.imageCarCssContainer}
+    >
       <View style={{ width }}>
         {!noTitle && (
           <View style={imageCardCss.title}>

@@ -47,20 +47,13 @@ function Home() {
           </Text>
         </View>
         <Search />
-        <ImageCard title="Louvre museum" src={img1} />
-      </Container>
-      {/*
-      <Container>
-        
-
-        <Search />
-        <TabView tabs={tabs} content={tabContent} />
-        <div style={centerRow}>
-          <span style={span} onClick={null}>
+        <TabView tabs={tabs} content={slideContent} />
+        <View style={homeCss.centerRow}>
+          <Text style={homeCss.span} onClick={null}>
             Show all
-          </span>
-        </div>
-  </Container>*/}
+          </Text>
+        </View>
+      </Container>
       <Dock />
     </Mobile>
   );

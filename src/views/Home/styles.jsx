@@ -22,7 +22,7 @@ const homeCss = StyleSheet.create({
     color: "rgb(189, 187, 187)",
   },
   centerRow: {
-    display: "flex",
+    flexDirection: "row",
     justifyContent: "center",
   },
 });

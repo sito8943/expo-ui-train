@@ -1,22 +1,25 @@
 import React from "react";
 
+// react-native
+import { Pressable, Text } from "react-native";
+
 // prop-types
 import PropTypes from "prop-types";
 
 // styles
-import { buttonTextCss, activeButton } from "./styles";
+import singleTabCss from "./styles";
 
 const Tab = (props) => {
   const { index, text, action, active } = props;
 
   return (
-    <button
+    <Pressable
       id={`t${index}`}
-      onClick={action}
-      style={`${buttonTextCss} ${active ? activeButton : ""}`}
+      onPress={action}
+      style={active ? singleTabCss.activeButton : singleTabCss.buttonTextCss}
     >
-      {text}
-    </button>
+      <Text>{text}</Text>
+    </Pressable>
   );
 };
 

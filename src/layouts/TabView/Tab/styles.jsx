@@ -1,18 +1,27 @@
 // emotion
 import { StyleSheet } from "react-native";
 
-const buttonTextCss = StyleSheet.create({
-  minWidth: 100,
-  border: "none",
-  color: "#9d9999",
-  padding: 10,
-  fontSize: 15,
-  backgroundColor: "none",
-  cursor: "pointer",
+const singleTabCss = StyleSheet.create({
+  buttonTextCss: {
+    minWidth: 100,
+    border: "none",
+    color: "#9d9999",
+    padding: 10,
+    fontSize: 15,
+    backgroundColor: "none",
+    cursor: "pointer",
+    textAlign: "center",
+  },
+  activeButton: {
+    backgroundColor: "#e9e5e5",
+    minWidth: 100,
+    border: "none",
+    color: "#9d9999",
+    padding: 10,
+    fontSize: 15,
+    cursor: "pointer",
+    textAlign: "center",
+  },
 });
 
-const activeButton = StyleSheet.create({
-  backgroundColor: "#e9e5e5 ",
-});
-
-export { buttonTextCss, activeButton };
+export default singleTabCss;

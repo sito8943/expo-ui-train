@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// react-native
+import { View } from "react-native";
+
 // prop-types
 import PropTypes from "prop-types";
 
@@ -7,7 +10,7 @@ import PropTypes from "prop-types";
 import Tab from "./Tab/Tab";
 
 // styles
-import { tabContainer, tabsContainerCss } from "./style";
+import tabViewCss from "./style";
 
 const TabView = (props) => {
   const { tabs, content } = props;
@@ -15,8 +18,8 @@ const TabView = (props) => {
   const [active, setActive] = useState(0);
 
   return (
-    <div style={tabContainer}>
-      <div style={`${tabsContainerCss} tab-container`}>
+    <View style={tabViewCss.tabContainer}>
+      <View style={tabViewCss.tabsContainerCss}>
         {tabs.map((item, i) => (
           <Tab
             index={i}
@@ -26,9 +29,9 @@ const TabView = (props) => {
             action={() => setActive(i)}
           />
         ))}
-      </div>
-      <div>{content[active]}</div>
-    </div>
+      </View>
+      <View>{content[active]}</View>
+    </View>
   );
 };
 
