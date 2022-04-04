@@ -47,7 +47,7 @@ function Home() {
           </Text>
         </View>
         <Search />
-        <TabView tabs={tabs} content={slideContent} />
+        <TabView tabs={tabs} content={tabContent} />
         <View style={homeCss.centerRow}>
           <Text style={homeCss.span} onClick={null}>
             Show all

@@ -8,7 +8,7 @@ const dockCss = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 15,
     paddingHorizontal: 20,
-    background: "rgb(243, 243, 243)",
+    backgroundColor: "rgb(243, 243, 243)",
     borderRadius: "10px 10px 0 0",
     borderTopRightRadius: 10,
     borderTopLeftRadius: 10,

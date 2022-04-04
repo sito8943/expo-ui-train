@@ -1,5 +1,8 @@
 import React from "react";
 
+// react-native
+import { ScrollView } from "react-native";
+
 // prop-types
 import PropTypes from "prop-types";
 
@@ -8,13 +11,13 @@ import Item from "./Item/Item";
 import SmallItem from "./SmallItem/SmallItem";
 
 // styles
-import { slideshow } from "./styles";
+import slideShowCss from "./styles";
 
 const Slideshow = (props) => {
   const { content, noMargin, small } = props;
 
   return (
-    <div style={slideshow} id="slideshow">
+    <ScrollView style={slideShowCss.slideshow} id="slideshow">
       {content.map((item, i) => {
         return !small ? (
           <Item
@@ -31,7 +34,7 @@ const Slideshow = (props) => {
           </SmallItem>
         );
       })}
-    </div>
+    </ScrollView>
   );
 };
 

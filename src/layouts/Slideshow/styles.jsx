@@ -1,10 +1,11 @@
 // emotion
 import { StyleSheet } from "react-native";
 
-const slideshow = StyleSheet.create({
-  display: "flex",
-  overflowX: "scroll",
-  margin: "auto",
+const slideShowCss = StyleSheet.create({
+  slideshow: {
+    flexDirection: "row",
+    overflowX: "scroll",
+    margin: "auto",
+  },
 });
-
-export { slideshow };
+export default slideShowCss;

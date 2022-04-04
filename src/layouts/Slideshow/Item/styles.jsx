@@ -1,28 +1,23 @@
-// emotion
-import { StyleSheet } from "react-native";
+const itemCss = {
+  item: {
+    height: 310,
+  },
+  even: {
+    marginTop: 10,
+  },
+  odd: {
+    marginBottom: 10,
+  },
+  startCss: {
+    marginLeft: 25,
+    marginRight: 28,
+  },
+  middleCss: {
+    marginRight: 25,
+  },
+  endCss: {
+    marginRight: 28,
+  },
+};
 
-const item = StyleSheet.create({
-  height: 310,
-});
-
-const even = StyleSheet.create({
-  marginTop: 10,
-});
-
-const odd = StyleSheet.create({
-  marginBottom: 10,
-});
-
-const startCss = StyleSheet.create({
-  margin: "0 25px  0 28px",
-});
-
-const middleCss = StyleSheet.create({
-  marginRight: 25,
-});
-
-const endCss = StyleSheet.create({
-  marginRight: 28,
-});
-
-export { item, even, odd, startCss, middleCss, endCss };
+export default itemCss;
