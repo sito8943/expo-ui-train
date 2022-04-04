@@ -8,7 +8,7 @@ const tabViewCss = StyleSheet.create({
     alignItems: "center",
     paddingTop: 15,
     overflow: "auto",
-    width: "85%",
+    width: "90%",
     margin: "auto",
   },
   tabContainer: {
