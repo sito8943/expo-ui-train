@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// react-native
+import { View, Text, Pressable, ImageBackground } from "react-native";
+
 // prop-types
 import PropTypes from "prop-types";
 
@@ -10,19 +13,7 @@ import { BsBookmarkDash, BsFillStarFill } from "react-icons/bs";
 import { StyleSheet } from "react-native";
 
 // styles
-import {
-  titleArea,
-  vrArea,
-  vrButton,
-  vrHr,
-  starSpan,
-  vrStarIcon,
-  imageCardCss,
-  markerButton,
-  titleCss,
-  markerShadow,
-  cardShadow,
-} from "./styles";
+import imageCardCss from "./styles";
 
 const ImageCard = (props) => {
   const {
@@ -44,44 +35,54 @@ const ImageCard = (props) => {
   };
 
   const backgroundImage = StyleSheet.create({
-    height,
-    width,
-    backgroundImage: `url(${src})`,
+    imageCarCssContainer: {
+      height,
+      width,
+      alignItems: "center",
+      justifyContent: "space-between",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      borderRadius: 15,
+      margin: "auto",
+      boxShadow: !noShadow ? "0px 15px 50px -20px" : "",
+    },
   });
 
   return (
-    <div
-      style={`${imageCardCss} ${backgroundImage} ${
-        !noShadow ? cardShadow : ""
-      }`}
-    >
-      <div style={titleArea}>
+    <ImageBackground source={src} style={backgroundImage.imageCarCssContainer}>
+      <View style={{ width }}>
         {!noTitle && (
-          <>
-            <h4 style={titleCss}>{title}</h4>
+          <View style={imageCardCss.title}>
+            <Text style={imageCardCss.titleText}>{title}</Text>
             {!noMarker && (
-              <button style={markerButton} onClick={() => toggleMarker()}>
-                <BsBookmarkDash style={`${toggle ? markerShadow : ""}`} />
-              </button>
+              <Pressable
+                style={imageCardCss.markerButton}
+                onClick={() => toggleMarker()}
+              >
+                <BsBookmarkDash style={toggle ? markerShadow : ""} />
+              </Pressable>
             )}
-          </>
+          </View>
         )}
-      </div>
+      </View>
 
       {!noButton && (
-        <div style={vrArea}>
-          <button style={vrButton}>Watch in VR</button>
-          {!noStars && (
-            <>
-              <hr style={vrHr} />
-              <span style={starSpan}>
-                4.5 <BsFillStarFill style={vrStarIcon} />
-              </span>
-            </>
-          )}
-        </div>
+        <View style={imageCardCss.vrArea}>
+          <Pressable style={imageCardCss.vrButton}>
+            <Text style={imageCardCss.vrButtonText}>Watch in VR</Text>
+
+            {!noStars && (
+              <>
+                <View style={imageCardCss.vrHr} />
+                <Text style={imageCardCss.starSpan}>
+                  4.5 <BsFillStarFill style={imageCardCss.vrStarIcon} />
+                </Text>
+              </>
+            )}
+          </Pressable>
+        </View>
       )}
-    </div>
+    </ImageBackground>
   );
 };
 

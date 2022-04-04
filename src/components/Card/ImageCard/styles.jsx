@@ -1,100 +1,72 @@
 // emotion
 import { StyleSheet } from "react-native";
 
-const titleArea = StyleSheet.create({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  width: "90%",
-  zIndex: 1,
-});
-
-const vrArea = StyleSheet.create({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  backgroundColor: "#9b9999",
-  padding: "0 10px",
-  borderRadius: 5,
-  zIndex: 1,
-  height: 42,
-  cursor: "pointer",
-  marginBottom: -20,
-  "&:hover": {
-    backgroundColor: "#abaaaa",
+const imageCardCss = StyleSheet.create({
+  title: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "90%",
+    margin: "auto",
+    marginTop: 10,
+    zIndex: 1,
+  },
+  titleText: {
+    color: "aliceblue",
+    fontWeight: "bold",
+  },
+  vrArea: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "rgb(155, 153, 153)",
+    paddingHorizontal: 10,
+    paddingVertical: 0,
+    borderRadius: 5,
+    zIndex: 1,
+    height: 42,
+    cursor: "pointer",
+    marginBottom: -20,
+  },
+  vrButton: {
+    backgroundColor: "none",
+    border: "none",
+    cursor: "pointer",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  vrButtonText: {
+    color: "aliceblue",
+    fontWeight: 700,
+  },
+  vrHr: {
+    margin: "0 10px",
+    height: "90%",
+    borderColor: "rgba(240, 248, 255, 94)",
+    cursor: "pointer",
+  },
+  starSpan: {
+    color: "aliceblue",
+    flexDirection: "row",
+    cursor: "pointer",
+  },
+  vrStarIcon: {
+    marginLeft: 7,
+    marginTop: -1,
+  },
+  markerButton: {
+    border: "none",
+    color: "aliceblue",
+    padding: 5,
+    fontSize: 18,
+    backgroundColor: "rgb(120, 118, 118)",
+    cursor: "pointer",
+    height: 29,
+  },
+  markerShadow: {
+    boxShadow: "0 0 25px 0",
   },
 });
 
-const vrButton = StyleSheet.create({
-  color: "aliceblue",
-  fontWeight: 700,
-  backgroundColor: "none",
-  border: "none",
-  cursor: "pointer",
-});
-
-const vrHr = StyleSheet.create({
-  margin: "0 10px",
-  height: "90%",
-  borderColor: "#f0f8ff5e",
-  cursor: "pointer",
-});
-
-const starSpan = StyleSheet.create({
-  color: "aliceblue",
-  display: "flex",
-  cursor: "pointer",
-});
-
-const vrStarIcon = StyleSheet.create({
-  marginLeft: 7,
-  marginTop: -1,
-  cursor: "pointer",
-});
-
-const imageCardCss = StyleSheet.create({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "space-between",
-  backgroundPosition: "center",
-  backgroundSize: "cover",
-  borderRadius: 15,
-  margin: "auto",
-});
-
-const cardShadow = StyleSheet.create({
-  boxShadow: "0px 15px 50px -20px",
-});
-
-const markerButton = StyleSheet.create({
-  border: "none",
-  color: "aliceblue",
-  padding: 5,
-  fontSize: 18,
-  backgroundColor: "#787676",
-  cursor: "pointer",
-  height: 29,
-});
-
-const titleCss = StyleSheet.create({
-  color: "aliceblue",
-});
-
-const markerShadow = StyleSheet.create({
-  boxShadow: "0 0 25px 0",
-});
-
-export {
-  cardShadow,
-  titleArea,
-  vrArea,
-  vrButton,
-  vrHr,
-  starSpan,
-  vrStarIcon,
-  imageCardCss,
-  markerButton,
-  titleCss,
-  markerShadow,
-};
+export default imageCardCss;

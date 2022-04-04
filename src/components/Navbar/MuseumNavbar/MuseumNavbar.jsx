@@ -1,22 +1,25 @@
 import React from "react";
 
+// react-native
+import { View, Pressable } from "react-native";
+
 // icons
 import { BsChevronLeft, BsBookmarkDash } from "react-icons/bs";
 
 // styles
-import { notificationCss, container } from "../styles";
-import { museum } from "./styles";
+import museumNavbar from "../styles";
+import navbarCss from "../styles";
 
 function MuseumNavbar() {
   return (
-    <div style={`${container} ${museum}`}>
-      <button onClick={null} style={notificationCss}>
+    <View style={museumNavbar.container}>
+      <Pressable onPress={null} style={navbarCss.notification}>
         <BsChevronLeft />
-      </button>
-      <button onClick={null} style={notificationCss}>
+      </Pressable>
+      <Pressable onPress={null} style={navbarCss.notification}>
         <BsBookmarkDash />
-      </button>
-    </div>
+      </Pressable>
+    </View>
   );
 }
 

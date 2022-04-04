@@ -47,6 +47,7 @@ function Home() {
           </Text>
         </View>
         <Search />
+        <ImageCard title="Louvre museum" src={img1} />
       </Container>
       {/*
       <Container>
