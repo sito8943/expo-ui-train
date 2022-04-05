@@ -9,14 +9,14 @@ const itemCss = {
     marginBottom: 10,
   },
   startCss: {
-    marginLeft: 25,
+    marginLeft: 45,
     marginRight: 28,
   },
   middleCss: {
     marginRight: 25,
   },
   endCss: {
-    marginRight: 28,
+    marginRight: 45,
   },
 };
 

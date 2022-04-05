@@ -1,7 +1,7 @@
 import React from "react";
 
 // react-native
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, StyleSheet } from "react-native";
 
 // prop-types
 import PropTypes from "prop-types";
@@ -11,13 +11,21 @@ import Item from "./Item/Item";
 import SmallItem from "./SmallItem/SmallItem";
 
 // styles
-import slideShowCss from "./styles";
+// import slideShowCss from "./styles";
 
 const Slideshow = (props) => {
   const { content, noMargin, small } = props;
 
+  const slideShowCss = StyleSheet.create({
+    slideshow: {
+      flexDirection: "row",
+      margin: "auto",
+      height: !small ? 345 : 165,
+    },
+  });
+
   return (
-    <ScrollView contentContainerStyle={{ overflow: "scroll" }}>
+    <ScrollView contentContainerStyle={{ overflowX: "scroll" }}>
       <View style={slideShowCss.slideshow} id="slideshow">
         {content.map((item, i) => {
           return !small ? (

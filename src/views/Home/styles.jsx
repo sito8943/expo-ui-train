@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 const homeCss = StyleSheet.create({
   span: {
     color: "rgb(159, 157, 157)",
-    marginTop: -20,
+    marginTop: -35,
     marginBottom: 10,
     cursor: "pointer",
   },
