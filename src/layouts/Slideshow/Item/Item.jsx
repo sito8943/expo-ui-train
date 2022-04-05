@@ -31,7 +31,6 @@ const Item = (props) => {
     // end
     if (index === total - 1)
       newClassName.marginRight = itemCss.endCss.marginRight;
-    console.log(newClassName);
     setClassName(StyleSheet.create({ item: newClassName }));
   }, []);
 

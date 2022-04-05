@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+// react-navigation
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // react-native
 import { Text, View } from "react-native-web";
@@ -19,8 +23,8 @@ import img2 from "../../assets/images/img2.jpg";
 import img3 from "../../assets/images/img3.jpg";
 
 // styles
-import "./style.css";
 import homeCss from "./styles";
+// import Loading from "../../components/Loading/Loading";
 
 const tabs = ["Popular", "For You", "India", "China", "Japan"];
 
@@ -35,7 +39,9 @@ const tabContent = [
   <Slideshow content={slideContent} />,
 ];
 
-function Home() {
+function Home({ navigation }) {
+  const [loading, setLoading] = useState(false);
+
   return (
     <Mobile>
       <Navbar />
@@ -49,7 +55,10 @@ function Home() {
         <Search />
         <TabView tabs={tabs} content={tabContent} />
         <View style={homeCss.centerRow}>
-          <Text style={homeCss.span} onClick={null}>
+          <Text
+            style={homeCss.span}
+            onClick={() => navigation.navigate("Museum")}
+          >
             Show all
           </Text>
         </View>

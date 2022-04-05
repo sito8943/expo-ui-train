@@ -1,10 +1,9 @@
 {
   "expo": {
-    "name": "ui-train",
-    "slug": "ui-train",
+    "owner": "sito8943",
+    "name": "example1",
+    "slug": "example1",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"]
   }
 }
