@@ -14,9 +14,9 @@ import Mobile from "../../layouts/Mobile/Mobile";
 import Container from "../../layouts/Mobile/Container/Container";
 
 // images
-import img1 from "../../assets/images/img1.jpg";
-import img2 from "../../assets/images/img2.jpg";
-import img3 from "../../assets/images/img3.jpg";
+import img1 from "../../../assets/images/img1.jpg";
+import img2 from "../../../assets/images/img2.jpg";
+import img3 from "../../../assets/images/img3.jpg";
 
 // styles
 import homeCss from "./styles";
