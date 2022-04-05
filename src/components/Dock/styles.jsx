@@ -13,8 +13,6 @@ const dockCss = StyleSheet.create({
     borderTopRightRadius: 10,
     borderTopLeftRadius: 10,
     width: "100%",
-    position: "fixed",
-    bottom: 0,
   },
   button: {
     border: "none",
