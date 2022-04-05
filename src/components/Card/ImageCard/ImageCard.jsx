@@ -101,7 +101,7 @@ ImageCard.defaultProps = {
   noStars: false,
   noShadow: false,
   // numbers
-  width: 285,
+  width: 320,
   height: 270,
   // strings
   title: "",

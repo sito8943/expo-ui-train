@@ -1,5 +1,8 @@
 import React from "react";
 
+// react-native
+import { View, Text } from "react-native";
+
 // components
 import ImageCard from "../../components/Card/ImageCard/ImageCard";
 import AccordionText from "../../components/AccordionText/AccordionText";
@@ -19,17 +22,8 @@ import img3 from "../../assets/images/img3.jpg";
 import { BsFillStarFill } from "react-icons/bs";
 
 // styles
-import {
-  titleArea as imageCardTitleArea,
-  vrStarIcon,
-} from "../../components/Card/ImageCard/styles";
-import {
-  titleArea,
-  titleCss,
-  starSpan,
-  smallItemSpan,
-  smallItemContainer,
-} from "./styles";
+import imageCardCss from "../../components/Card/ImageCard/styles";
+import museumCss from "./styles";
 
 const tabs = ["Exhibitions", "Highlights", "Guided Tours", "Artworks"];
 
@@ -40,18 +34,18 @@ const slideContent = [
 ];
 
 const smallContent = [
-  <div style={smallItemContainer}>
+  <View style={museumCss.smallItemContainer}>
     <ImageCard noTitle noButton noShadow src={img1} width={130} height={100} />
-    <span style={smallItemSpan}>History of Louvre</span>
-  </div>,
-  <div style={smallItemContainer}>
+    <Text style={museumCss.smallItemSpan}>History of Louvre</Text>
+  </View>,
+  <View style={museumCss.smallItemContainer}>
     <ImageCard noTitle noButton noShadow src={img2} width={130} height={100} />
-    <span style={smallItemSpan}>Recent Additions</span>
-  </div>,
-  <div style={smallItemContainer}>
+    <Text style={museumCss.smallItemSpan}>Recent Additions</Text>
+  </View>,
+  <View style={museumCss.smallItemContainer}>
     <ImageCard noTitle noButton noShadow src={img3} width={130} height={100} />
-    <span style={smallItemSpan}>About the Museum</span>
-  </div>,
+    <Text style={museumCss.smallItemSpan}>About the Museum</Text>
+  </View>,
 ];
 const tabContent = [
   <Slideshow content={slideContent} noMargin />,
@@ -59,27 +53,27 @@ const tabContent = [
   <Slideshow content={slideContent} noMargin />,
 ];
 
-const Museums = () => {
+const Museums = ({ navigation }) => {
   return (
     <Mobile>
-      <MuseumNavbar />
-      <Container>
+      <MuseumNavbar onBack={() => navigation.pop()} />
+      <Container marginTop={20}>
         <ImageCard noTitle src={img1} noStars />
 
-        <div style={`${titleArea} ${imageCardTitleArea}`}>
-          <h4 style={titleCss}>Louvre Museum, Paris</h4>
-          <span style={starSpan}>
-            4.5 <BsFillStarFill style={vrStarIcon} />
-          </span>
-        </div>
+        <View style={museumCss.titleArea}>
+          <Text style={museumCss.titleCss}>Louvre Museum, Paris</Text>
+          <Text style={museumCss.starSpan}>
+            4.5 <BsFillStarFill style={imageCardCss.vrStarIcon} />
+          </Text>
+        </View>
         <AccordionText
           text={
             "The Louvre, of the Louvre Museum, is the world's most-visited museum. The museum is open today from 9:00 AM to 6:00 PM"
           }
         />
-        <div>
+        <View>
           <Slideshow small content={smallContent} />
-        </div>
+        </View>
         <TabView tabs={tabs} content={tabContent} />
       </Container>
       <Dock />

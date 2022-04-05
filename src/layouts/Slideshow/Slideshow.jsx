@@ -20,7 +20,7 @@ const Slideshow = (props) => {
     slideshow: {
       flexDirection: "row",
       margin: "auto",
-      height: !small ? 345 : 165,
+      height: !small ? 345 : 160,
     },
   });
 

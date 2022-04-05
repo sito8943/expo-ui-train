@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-// react-navigation
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
 // react-native
 import { Text, View } from "react-native-web";
 

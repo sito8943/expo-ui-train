@@ -7,30 +7,30 @@ import { View, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
 // styles
-import itemCss from "./styles";
+import item from "./styles";
 
 const Item = (props) => {
   const { index, children, total, noMargin } = props;
 
-  const [className, setClassName] = useState(itemCss.item);
+  const [className, setClassName] = useState(item.item);
 
   useEffect(() => {
-    const newClassName = { height: itemCss.item.height };
+    const newClassName = { height: item.item.height };
     // vertical margins
     if (!noMargin) {
-      if (index % 2) newClassName.marginTop = itemCss.even.marginTop;
-      else newClassName.marginBottom = itemCss.odd.marginBottom;
+      if (index % 2) newClassName.marginTop = item.even.marginTop;
+      else newClassName.marginBottom = item.odd.marginBottom;
     }
     // start
-    if (index !== 0) newClassName.marginRight = itemCss.middleCss.marginRight;
+    if (index !== 0) newClassName.marginRight = item.middle.marginRight;
     // middle
     if (index === 0 && index < total - 1) {
-      newClassName.marginLeft = itemCss.startCss.marginLeft;
-      newClassName.marginRight = itemCss.startCss.marginRight;
+      newClassName.marginLeft = item.start.marginLeft;
+      newClassName.marginRight = item.start.marginRight;
     }
     // end
     if (index === total - 1)
-      newClassName.marginRight = itemCss.endCss.marginRight;
+      newClassName.marginRight = item.end.marginRight;
     setClassName(StyleSheet.create({ item: newClassName }));
   }, []);
 

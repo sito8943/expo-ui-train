@@ -1,4 +1,4 @@
-const itemCss = {
+const item = {
   item: {
     height: 310,
   },
@@ -8,16 +8,16 @@ const itemCss = {
   odd: {
     marginBottom: 10,
   },
-  startCss: {
-    marginLeft: 45,
+  start: {
+    marginLeft: 25,
+    marginRight: 23,
+  },
+  middle: {
+    marginRight: 23,
+  },
+  end: {
     marginRight: 28,
-  },
-  middleCss: {
-    marginRight: 25,
-  },
-  endCss: {
-    marginRight: 45,
   },
 };
 
-export default itemCss;
+export default item;

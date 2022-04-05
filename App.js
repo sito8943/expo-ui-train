@@ -10,7 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // screens
 import Home from "./src/views/Home/Home";
-import Navbar from "./src/components/Navbar/Navbar";
+import Museums from "./src/views/Museums/Museums";
 
 const Stack = createNativeStackNavigator();
 
@@ -37,10 +37,9 @@ export default function App() {
         <Stack.Screen
           name="Museum"
           options={{
-            animationTypeForReplace: "push",
-            animation: "slide_from_right",
+            headerShown: false,
           }}
-          component={MuseumScreen}
+          component={Museums}
         />
       </Stack.Navigator>
     </NavigationContainer>

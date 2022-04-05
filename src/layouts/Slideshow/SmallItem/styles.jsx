@@ -1,21 +1,20 @@
 // emotion
 import { StyleSheet } from "react-native";
 
-const smallItem = StyleSheet.create({
-  height: 130,
-  width: 130,
-});
+const smallItem = {
+  smallItem: {
+    height: 130,
+    width: 130,
+    marginVertical: 20,
+  },
+  smallStart: {
+    marginLeft: 25,
+    marginRight: 23,
+  },
+  smallMiddle: {
+    marginRight: 25,
+  },
+  smallEnd: { marginRight: 28 },
+};
 
-const startSmallCss = StyleSheet.create({
-  margin: "0 25px  0 28px",
-});
-
-const middleSmallCss = StyleSheet.create({
-  marginRight: 25,
-});
-
-const endSmallCss = StyleSheet.create({
-  marginRight: 28,
-});
-
-export { smallItem, startSmallCss, middleSmallCss, endSmallCss };
+export default smallItem;

@@ -16,7 +16,7 @@ const Navbar = () => {
         <BsList />
       </Pressable>
       <Pressable onClick={null} style={navbarCss.textList}>
-        Europe
+        <Text>Europe</Text>
         <Text style={navbarCss.span}>
           <BsChevronDown />
         </Text>

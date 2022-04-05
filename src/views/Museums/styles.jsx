@@ -1,28 +1,33 @@
 // emotion
 import { StyleSheet } from "react-native";
 
-const titleArea = StyleSheet.create({
-  margin: "20px auto auto auto",
-  width: "80%",
+const museumCss = StyleSheet.create({
+  titleArea: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "85%",
+    margin: "auto",
+    marginTop: 40,
+    zIndex: 1,
+  },
+  smallItemContainer: {
+    flexDirection: "column",
+  },
+  smallItemSpan: {
+    margin: "auto",
+    marginTop: 7,
+  },
+  starSpan: {
+    color: "#626262",
+    flexDirection: "row",
+    cursor: "pointer",
+  },
+  titleCss: {
+    color: "#1d1d1d",
+    fontWeight: "bold",
+    fontSize: 15
+  },
 });
 
-const smallItemContainer = StyleSheet.create({
-  display: "flex",
-  flexDirection: "column",
-});
-
-const smallItemSpan = StyleSheet.create({
-  margin: "7px auto auto auto",
-});
-
-const starSpan = StyleSheet.create({
-  color: "#626262",
-  display: "flex",
-  cursor: "pointer",
-});
-
-const titleCss = StyleSheet.create({
-  color: "#1d1d1d",
-});
-
-export { starSpan, titleCss, titleArea, smallItemSpan, smallItemContainer };
+export default museumCss;
