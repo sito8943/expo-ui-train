@@ -51,6 +51,7 @@ const tabContent = [
   <Slideshow content={slideContent} noMargin />,
   <Slideshow content={slideContent} noMargin />,
   <Slideshow content={slideContent} noMargin />,
+  <Slideshow content={slideContent} noMargin />,
 ];
 
 const Museums = ({ navigation }) => {

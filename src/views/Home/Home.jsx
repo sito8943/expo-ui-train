@@ -33,6 +33,8 @@ const tabContent = [
   <Slideshow content={slideContent} />,
   <Slideshow content={slideContent} />,
   <Slideshow content={slideContent} />,
+  <Slideshow content={slideContent} />,
+  <Slideshow content={slideContent} />,
 ];
 
 function Home({ navigation }) {

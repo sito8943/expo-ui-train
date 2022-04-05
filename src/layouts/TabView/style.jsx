@@ -9,6 +9,7 @@ const tabViewCss = StyleSheet.create({
     paddingTop: 15,
     width: "90%",
     margin: "auto",
+    overflow: "scroll",
   },
   tabContainer: {
     width: "100%",
