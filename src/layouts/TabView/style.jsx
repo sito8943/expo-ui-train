@@ -7,7 +7,6 @@ const tabViewCss = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingTop: 15,
-    overflow: "auto",
     width: "90%",
     margin: "auto",
   },

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // react-native
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 
 // prop-types
 import PropTypes from "prop-types";
@@ -19,7 +19,7 @@ const TabView = (props) => {
 
   return (
     <View style={tabViewCss.tabContainer}>
-      <View style={tabViewCss.tabsContainerCss}>
+      <ScrollView contentContainerStyle={tabViewCss.tabsContainerCss}>
         {tabs.map((item, i) => (
           <Tab
             index={i}
@@ -29,7 +29,7 @@ const TabView = (props) => {
             action={() => setActive(i)}
           />
         ))}
-      </View>
+      </ScrollView>
       <View>{content[active]}</View>
     </View>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 
 // react-native
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 
 // prop-types
 import PropTypes from "prop-types";
@@ -17,23 +17,25 @@ const Slideshow = (props) => {
   const { content, noMargin, small } = props;
 
   return (
-    <ScrollView style={slideShowCss.slideshow} id="slideshow">
-      {content.map((item, i) => {
-        return !small ? (
-          <Item
-            key={`item${i}`}
-            noMargin={noMargin}
-            index={i}
-            total={content.length}
-          >
-            {item}
-          </Item>
-        ) : (
-          <SmallItem key={`item${i}`} index={i} total={content.length}>
-            {item}
-          </SmallItem>
-        );
-      })}
+    <ScrollView contentContainerStyle={{ overflow: "scroll" }}>
+      <View style={slideShowCss.slideshow} id="slideshow">
+        {content.map((item, i) => {
+          return !small ? (
+            <Item
+              key={`item${i}`}
+              noMargin={noMargin}
+              index={i}
+              total={content.length}
+            >
+              {item}
+            </Item>
+          ) : (
+            <SmallItem key={`item${i}`} index={i} total={content.length}>
+              {item}
+            </SmallItem>
+          );
+        })}
+      </View>
     </ScrollView>
   );
 };
