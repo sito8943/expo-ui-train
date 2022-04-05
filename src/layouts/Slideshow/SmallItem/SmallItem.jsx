@@ -32,7 +32,6 @@ const SmallItem = (props) => {
     if (index === total - 1)
       newClassName.marginRight = smallItem.smallEnd.marginRight;
     setClassName(StyleSheet.create({ smallItem: newClassName }));
-    console.log(newClassName);
   }, []);
 
   return <View style={className.smallItem}>{children}</View>;
